@@ -24,3 +24,8 @@ frm.addEventListener("submit", (e) => {
   resposta.innerText = ` Olá ${nome}!\nSeu peso ideal é de ${peso.toFixed(2)} kg`
 
 })
+
+// Limpar o conteúdo da resposta
+frm.addEventListener("reset", (e) => {
+  resposta.innerText = ""
+})
