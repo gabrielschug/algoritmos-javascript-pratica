@@ -1,18 +1,13 @@
 const prompt = require('prompt-sync')()
 
 // Entrada
-let valor = Number(prompt('Valor da Conta: R$ '))
-let numParcelas = Number(prompt('Número de Parcelas: '))
-// const formaPagamento = Number(prompt('[1] Boleto? ou [2] Carnê?: '))
+const valor = Number(prompt('Valor: R$ '))
+const num = Number(prompt('Número de Parcelas: '))
 
-if (Number.isInteger(valor / numParcelas)) {
-    for (let i = 1; i <= numParcelas; i++) {
-        console.log(`Parcela ${i}: R$ ${valor / numParcelas}`)
-    }
-} else {
-    let valorParcela = Math.floor(valor / numParcelas)
-    for (let i = 1; i <= numParcelas - 1; i++) {
-        console.log(`Parcela ${i}: R$ ${valorParcela}`)
-    }
-    console.log(`Parcela ${numParcelas}: R$ ${(valor - (valorParcela * numParcelas - 1)) + valorParcela}`)
+const valorParcelas = Math.floor(valor / num) // Parceças sem decimais
+const valorFinal = valorParcelas + (valor % num) // Ultima parcela com o resto
+
+for (let i = 1; i < num; i++) { // percorre até a penultima parcela
+    console.log(`${i}ª Parcela: R$ ${valorParcelas.toFixed(2)}`)
 }
+console.log(`${num}ª Parcela: R$ ${valorFinal.toFixed(2)}`) // ultima parcela
