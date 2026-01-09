@@ -11,26 +11,27 @@ frm.addEventListener("submit", (e) => {
   e.preventDefault()
 
   const numero = frm.inNumero.value
-  if (numero == sorteado) {                                                   // SE ACERTEI = TERMINA
+
+  if (numero == sorteado) {
     respDica.innerText = `Parabéns! Número sorteado: ${sorteado}`
 
     frm.btSubmit.disabled = true
     frm.btNovo.className = "exibe"
-  } else {                                                                    // SE NÃO ACERTEI ...
-    if (erros.includes(numero)) {                                                   // SE JÁ TINHA ERRADO ESSE NÚMERO = ALERTA
+  } else {
+    if (erros.includes(numero)) {
       alert(`Você já apostou o número ${numero}. Tente outro...`)
-    } else {                                                                        // SE Ñ TINHA JOGADO ESSE NÚMERO ...
+    } else {
       erros.push(numero)
       const numErros = erros.length
       const numChances = CHANCES - numErros
       respErros.innerText = `${numErros} (${erros.join(" - ")})`
       respChances.innerText = numChances
-      if (numChances == 0) {                                                              // SE ACABOU MINHAS CHANCES = RESET
+      if (numChances == 0) {
         alert(`Suas chances acabaram ...`)
         frm.btSubmit.disabled = true
         frm.btNovo.className = "exibe"
         respDica.innerText = `Game Over! Número Sorteado: ${sorteado}`
-      } else {                                                                            // SE AINDA TENHO CHANCES = DICA
+      } else {
         const dica = numero < sorteado ? "maior" : "menor"
         respDica.innerText = `Dica: Tente um número ${dica} que ${numero}`
       }
