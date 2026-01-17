@@ -40,10 +40,15 @@ btListar.addEventListener(("click"), () => {
 btTabelar.addEventListener(("click"), () => {
   if (clubes.length % 2 !== 0) {
     resp.innerText = "*Incapaz de fechar confrontos"
+    return
   }
   let confrontos = ''
+  for (let i = 1; i <= clubes.length / 2; i++) {
+    console.log(i)
+    confrontos += `${clubes[i - 1]} x ${clubes[clubes.length - i]}\n`
 
+  }
 
-  resp.innerText = "CONFRONTOS\n" + '-'.repeat(30) + '\n' + confrontos
+  resp.innerText = clubes.length % 2 + "CONFRONTOS\n" + '-'.repeat(30) + '\n' + confrontos
 
 })
