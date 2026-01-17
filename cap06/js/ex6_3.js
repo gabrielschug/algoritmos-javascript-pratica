@@ -41,20 +41,17 @@ frm.btListar.addEventListener("click", () => {
 frm.btFiltrar.addEventListener("click", () => {
   const maximo = Number(prompt("Qual o valor máximo que desejas pagar?"))
 
-  if (maximo == 0 || isNaN(maximo)) {
-    return
-  }
-
-  const carrosFilter = carros.filter(carro => carro.preco <= maximo)
-  if (carrosFilter === 0) {
-    alert("Não há carros nesta faixa de preço")
+  if (maximo === 0 || isNaN(maximo)) {
     return
   }
 
   let lista = ''
-  for (const carro of carrosFilter) {
-    lista += `${carro.modelo}  - R$: ${carro.preco.toFixed(2)}\n`
-  }
+  const carrosFilter = carros.reduce((acumulador, carro) => {
+    if (carro.preco <= maximo) { // FILTER - CONDIÇÃO
+      lista += `${carro.modelo} - R$ ${carro.preco.toFixed(2)}\n` // REDUCE - CONCATENANDO
+    }
+
+  }, '')
 
   resp.innerText = `Carros Até ${maximo.toFixed(2)}:\n${'-'.repeat(40)}\n${lista}`
 
