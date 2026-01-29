@@ -49,6 +49,6 @@ btTabelar.addEventListener(("click"), () => {
 
   }
 
-  resp.innerText = clubes.length % 2 + "CONFRONTOS\n" + '-'.repeat(30) + '\n' + confrontos
+  resp.innerText = "CONFRONTOS\n" + '-'.repeat(30) + '\n' + confrontos
 
 })

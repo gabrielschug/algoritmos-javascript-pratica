@@ -1,0 +1,47 @@
+<!-- 
+☐ Estrutura básica ok 
+☐ Título claro 
+☐ Labels nos inputs 
+☐ Alt nas imagens 
+☐ Código organizado 
+☐ Simples e legível
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png" type="image/x-icon">
+  <title>Exemplo 6.c</title>
+</head>
+
+<body>
+  <img class="alta"
+    src="https://images.pexels.com/photos/7111523/pexels-photo-7111523.jpeg?_gl=1*uqzeog*_ga*MzE3NTc1Mzg5LjE3NjI0NjA2NTg.*_ga_8JE65Q40S6*czE3Njk2NDA0NTIkbzEzJGcxJHQxNzY5NjQwNDk1JGoxNyRsMCRoMA.."
+    alt="Imagem Ilustrativa">
+  <h1>Programa Números em Ordem</h1>
+  <form>
+    <div>
+      <div>
+        <label for="inCandidato">Candidato: </label>
+        <input type="text" id="inCandidato" name="inCandidato" required autofocus>
+      </div>
+      <div>
+        <label for="inAcertos">Acertos: </label>
+        <input type="number" id="inAcertos" name="inAcertos" required>
+        <input type="submit" value="Adicionar" id="btSubmit">
+      </div>
+    </div>
+    <div>
+      <input type="button" value="Listar Todos" id="botaoListarCandidatos">
+      <input type="button" value="Aprovados 2ª Etapa" id="botaoMostrarAprovados">
+    </div>
+  </form>
+  <h3></h3>
+  <pre></pre>
+  <script src="js/ex6_c.js"></script>
+</body>
+
+</html>

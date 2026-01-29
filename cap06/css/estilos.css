@@ -12,6 +12,10 @@ img.alta {
     margin-right: 20px;
 }
 
+div {
+    margin-bottom: 1rem;
+}
+
 h1 {
     border-bottom-style: inset;
 }
