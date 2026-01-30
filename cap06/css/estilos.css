@@ -2,7 +2,8 @@ img.normal {
     float: left;
     height: 300px;
     width: 300px;
-    margin-right: 20px
+    margin-right: 20px;
+    border-radius: 1rem;
 }
 
 img.alta {
@@ -10,6 +11,7 @@ img.alta {
     height: 420px;
     width: 300px;
     margin-right: 20px;
+    border-radius: 1rem;
 }
 
 div {

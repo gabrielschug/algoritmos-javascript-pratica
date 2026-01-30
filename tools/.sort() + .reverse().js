@@ -19,3 +19,9 @@ console.log(numeros.join(", "))
 
 numeros.sort((a, b) => a - b)
 console.log(numeros.join(", "))
+
+// Ordenação Crescente: se b.elemento - a.elemento for positivo, 'b' vem antes de 'a'
+ARRAY.sort((a, b) => a.elemento - b.elemento);
+
+// Ordenação Decrescente: se b.elemento - a.elemento for positivo, 'b' vem antes de 'a'
+ARRAY.sort((a, b) => b.elemento - a.elemento);
