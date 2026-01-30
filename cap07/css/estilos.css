@@ -1,0 +1,48 @@
+img.normal {
+    float: left;
+    height: 300px;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 1rem;
+}
+
+img.alta {
+    float: left;
+    height: 420px;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 1rem;
+}
+
+div {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    border-bottom-style: inset;
+}
+
+pre {
+    font-size: 1.2em;
+}
+
+.fonte-azul {
+    color: blue;
+}
+.oculta {
+    display: none;
+}
+.exibe {
+    display: inline;
+}
+.italico {
+    font-style: italic;
+}
+
+.entre-letras {
+    letter-spacing: 0.5em;
+}
+
+.alinha-direita {
+    text-align: right;
+}
