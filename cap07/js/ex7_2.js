@@ -1,3 +1,12 @@
+/*
+☐ Funciona?
+☐ Nomes claros?
+☐ Não repete código?
+☐ Funções fazem 1 coisa?
+☐ Fácil de ler?
+☐ Não compliquei demais?
+*/
+
 const formulario = document.querySelector('form')
 const retorno = document.querySelector('span')
 
