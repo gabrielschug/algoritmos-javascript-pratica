@@ -16,18 +16,19 @@ formulario.addEventListener("submit", (event) => {
   event.preventDefault()
 
   // ENTRADA
-  const nome = formulario.inNome.value.trim()
+  const funcionario = formulario.inNome.value
 
-  // VALIDAÇÃO DA ENTRADA
-  if (!nome.includes(' ')) {
-    alert('Informe o nome completo...')
-    return
-  }
   // REGRA 
-  const primeiroEspaco = nome.indexOf(" ")
-  const ultimoEspaco = nome.lastIndexOf(" ")
-  const cracha = nome.substr(0, primeiroEspaco) + nome.substr(ultimoEspaco)
+  const partes = funcionario.split(" ")
+  let email = ""
+  const tamanho = partes.length
 
-  retorno.innerText = `Cracha: ${cracha}`
+  for(let i = 0; i < tamanho -1; i++){
+    email +=partes[i].charAt(0)
+  }
+
+  email += partes[tamanho -1] + "@empresa.com.br" // contatena ultimo sobrenome + @...
+
+  retorno.innerText = `email: ${email.toLocaleLowerCase()}`
 
 })

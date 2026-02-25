@@ -14,3 +14,8 @@ for (const caractere of frase) {
   }
 }
 console.log(`A  frase: "${frase}" contém ${numeroPalavras + 1} palavras`)
+
+const frase2 = 'Agora pode contar com o metodo .split'
+const partes = frase2.split(" ")
+const tamanhoFrase2 = partes.length
+console.log(`A frase "${frase2}" contém ${tamanhoFrase2} palavras`)
