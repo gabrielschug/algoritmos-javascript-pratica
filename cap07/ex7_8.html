@@ -1,0 +1,47 @@
+<!-- 
+☐ Estrutura básica ok 
+☐ Título claro 
+☐ Labels nos inputs 
+☐ Alt nas imagens 
+☐ Código organizado 
+☐ Simples e legível
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png" type="image/x-icon">
+  <title>Exemplo 7.8</title>
+</head>
+
+<body>
+  <img class="alta"
+    src="https://images.pexels.com/photos/8657376/pexels-photo-8657376.jpeg?_gl=1*zsulwg*_ga*MzE3NTc1Mzg5LjE3NjI0NjA2NTg.*_ga_8JE65Q40S6*czE3NzIzNzkyNzEkbzE4JGcxJHQxNzcyMzc5MzE1JGoxNiRsMCRoMA.."
+    alt="Imagem Ilustrativa">
+  <h1>Programa Caixa da Loja</h1>
+  <form>
+    <div style="display: grid; grid-template-columns:repeat(1, 300px); ">
+      <label for="inDataVencimento">Data de Vencimento: </label>
+      <input type="date" id="inDataVencimento" name="inDataVencimento" autofocus required>
+      <label for="inValorConta">Valor da Conta R$: </label>
+      <input type="number" id="inValorConta" name="inValorConta" min=0 step=0.1 class="alinha-direita" required>
+      <input type="submit" value="Calcular Multa e Juros">
+    </div>
+    <div style="display: grid; grid-template-columns:repeat(1, 300px);">
+      <label for="outValorMulta">Valor da Multa R$: </label>
+      <input type="number" id="outValorMulta" name="outValorMulta" class="alinha-direita" readonly>
+      <label for="outValorJuros">Valor do Juros R$: </label>
+      <input type="number" id="outValorJuros" name="outValorJuros" class="alinha-direita" readonly>
+      <label for="outTotalPagar">Total a Pagar R$...: </label>
+      <input type="number" id="outTotalPagar" name="outTotalPagar" class="alinha-direita" readonly>
+      <input type="reset" value="Nova Conta">
+    </div>
+  </form>
+  <h3></h3>
+  <script src="js/ex7_8.js"></script>
+</body>
+
+</html>
