@@ -19,3 +19,12 @@ label {
   border-radius: 100px;
   cursor: pointer;
 }
+.transacoes, .patrimonio {
+  display: flex;
+  border: 2px solid #333;
+  padding: 1rem;
+  margin: 1rem;
+}
+.transacoes, div {
+  flex-direction: column;
+}
