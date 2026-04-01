@@ -9,7 +9,8 @@ O foco principal é **desenvolver o **raciocínio lógico****, **manipulação d
 ## 🚀 Acesse os Projetos (Ao Vivo)
 
 Todos os exercícios foram publicados via GitHub Pages. Você pode navegar por eles acessando o menu principal:
-🌐 **[Visualizar Projetos no Navegador]([link](https://gabrielschug.github.io/algoritmos-javascript-pratica/))**
+
+🌐 **[Visualizar Projetos no Navegador](https://gabrielschug.github.io/algoritmos-javascript-pratica/)**
 
 ---
 
