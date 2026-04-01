@@ -1,0 +1,16 @@
+<h3></h3>
+<script>
+  const resp = document.querySelector("h3")
+
+  const situacao = (nota, media) => {
+    const resultado = nota >= media ? "Aprovado" : "Reprovado"
+    return resultado
+  }
+
+  const prova1 = Number(prompt("Qual nota: "))
+
+  const aluno1 = situacao(prova1, 7)
+
+  resp.innertext = `Situação: ${aluno1}`
+
+</script>
