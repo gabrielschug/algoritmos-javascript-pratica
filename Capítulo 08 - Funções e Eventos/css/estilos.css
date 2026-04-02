@@ -14,35 +14,17 @@ img.alta {
     border-radius: 1rem;
 }
 
-div {
-    margin-bottom: 1rem;
-}
+div { margin-bottom: 1rem; }
+h1 { border-bottom-style: inset; }
+pre { font-size: 1.2em; }
+span { margin-left: 70px; }
+select { width: 150px; }
 
-h1 {
-    border-bottom-style: inset;
-}
+.detalhes { width: 380px; }
+.fonte-azul { color: blue; }
+.oculta { display: none; }
+.exibe { display: inline; }
 
-pre {
-    font-size: 1.2em;
-}
-
-.fonte-azul {
-    color: blue;
-}
-.oculta {
-    display: none;
-}
-.exibe {
-    display: inline;
-}
-.italico {
-    font-style: italic;
-}
-
-.entre-letras {
-    letter-spacing: 0.5em;
-}
-
-.alinha-direita {
-    text-align: right;
-}
+.italico { font-style: italic; }
+.entre-letras { letter-spacing: 0.5em; }
+.alinha-direita { text-align: right; }

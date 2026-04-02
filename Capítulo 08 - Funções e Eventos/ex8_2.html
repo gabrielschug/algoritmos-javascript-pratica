@@ -1,0 +1,44 @@
+<!-- 
+☐ Estrutura básica ok 
+☐ Título claro 
+☐ Labels nos inputs 
+☐ Alt nas imagens 
+☐ Código organizado 
+☐ Simples e legível
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png" type="image/x-icon">
+  <title>Exemplo 8.2</title>
+</head>
+
+<body>
+  <img class="alta" src="https://images.pexels.com/photos/5981545/pexels-photo-5981545.jpeg" alt="Imagem Ilustrativa">
+  <h1>Revenda Avenida - Promoção</h1>
+  <form>
+    <div>
+      <label for="inModelo">Modelo do Veículo: </label>
+      <input type="text" id="inModelo" name="inModelo" required autofocus>
+    </div>
+    <div>
+      <label for="inAnoFabricacao">Ano de Fabricação: </label>
+      <input type="number" id="inAnoFabricacao" name="inAnoFabricacao" required>
+    </div>
+    <div>
+      <label for="inPreco">Preço R$: </label>
+      <input type="number" min="0" step="0.01" id="inPreco" name="inPreco" required>
+    </div>
+    <input type="submit" value="Classificar - Calcular Entrada e Parcelas">
+  </form>
+  <h3 id="outResposta1"></h3>
+  <h3 id="outResposta2"></h3>
+  <h3 id="outResposta3"></h3>
+  <script src="js/ex8_2.js"></script>
+</body>
+
+</html>
