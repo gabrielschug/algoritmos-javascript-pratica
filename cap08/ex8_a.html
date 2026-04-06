@@ -1,0 +1,42 @@
+<!-- 
+☐ Estrutura básica ok 
+☐ Título claro 
+☐ Labels nos inputs 
+☐ Alt nas imagens 
+☐ Código organizado 
+☐ Simples e legível
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png" type="image/x-icon">
+  <title>Exemplo 8.a</title>
+</head>
+
+<body>
+  <img class="alta"
+    src="https://images.pexels.com/photos/31827766/pexels-photo-31827766.jpeg?_gl=1*1mmscy8*_ga*MTkyMTU1MzQ2My4xNzcyMDQ0MTA1*_ga_8JE65Q40S6*czE3NzU0OTM2NjIkbzQkZzEkdDE3NzU0OTM2NzkkajQzJGwwJGgw"
+    alt="Imagem Ilustrativa">
+  <h1>Clube de Natação</h1>
+  <form>
+    <div>
+      <label for="inNome">Nome do Atleta: </label>
+      <input type="text" id="inNome" name="inNome"  autofocus required>
+    </div>
+    <div>
+      <label for="inIdade">Idade: </label>
+      <input type="number" min="0" id="inIdade" name="inIdade" required>
+    </div>
+    <div>
+      <input type="submit" value="Categorizar Atleta">
+    </div>
+  </form>
+  <h3></h3>
+  <script src="js/ex8_a.js"></script>
+</body>
+
+</html>

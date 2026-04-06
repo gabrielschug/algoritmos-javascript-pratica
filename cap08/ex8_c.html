@@ -1,0 +1,50 @@
+<!-- 
+☐ Estrutura básica ok 
+☐ Título claro 
+☐ Labels nos inputs 
+☐ Alt nas imagens 
+☐ Código organizado 
+☐ Simples e legível
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png" type="image/x-icon">
+  <title>Exemplo 8.c</title>
+</head>
+
+<body>
+  <img class="alta"
+    src="https://images.pexels.com/photos/6235022/pexels-photo-6235022.jpeg?_gl=1*1sxnu5e*_ga*MTkyMTU1MzQ2My4xNzcyMDQ0MTA1*_ga_8JE65Q40S6*czE3NzU0OTk2MTIkbzYkZzEkdDE3NzU0OTk2MzckajM1JGwwJGgw"
+    alt="Imagem Ilustrativa">
+  <h1>Veterinária Avenida</h1>
+  <form>
+    <div>
+      <label for="inValorVacina">Valo da Vacina: </label>
+      <input type="text" id="inValorVacina" name="inValorVacina"  autofocus required>
+    </div>
+    <div>
+      <label for="inTemConvenio">Possui Convênio: </label>
+      <input type="radio" id="temConvenio" name="inTemConvenio">Sim
+      <input type="radio" id="naoTemConvenio" name="inTemConvenio">Não
+    </div>
+    <div>
+      <label for="inConvenio" class="oculta">Convênio: </label>
+      <select name="inConvenio" id="inConvenio" class="oculta">Convenio
+        <option value="Amigo dos Animais">Amigo dos Animais</option>
+        <option value="Saúde Animal">Saúde Animal</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit" value="Calcular Desconto">
+    </div>
+  </form>
+  <h3></h3>
+  <script src="js/ex8_c.js"></script>
+</body>
+
+</html>
