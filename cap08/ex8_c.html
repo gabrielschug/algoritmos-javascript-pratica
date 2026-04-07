@@ -24,18 +24,17 @@
   <h1>Veterinária Avenida</h1>
   <form>
     <div>
-      <label for="inValorVacina">Valo da Vacina: </label>
-      <input type="text" id="inValorVacina" name="inValorVacina"  autofocus required>
+      <label for="inValorVacina">Valor da Vacina: </label>
+      <input type="text" id="inValorVacina" name="inValorVacina" autofocus required>
     </div>
     <div>
       <label for="inTemConvenio">Possui Convênio: </label>
-      <input type="radio" id="temConvenio" name="inTemConvenio">Sim
-      <input type="radio" id="naoTemConvenio" name="inTemConvenio">Não
+      <input type="radio" id="rbConvenio" name="inTemConvenio">Sim <input type="radio" id="rbSemConvenio"
+        name="inTemConvenio">Não
     </div>
-    <div>
-      <label for="inConvenio" class="oculta">Convênio: </label>
-      <select name="inConvenio" id="inConvenio" class="oculta">Convenio
-        <option value="Amigo dos Animais">Amigo dos Animais</option>
+    <div id="divConvenio">
+      <label id="tituloConvenio" for="inConvenio">Convênio: </label>
+      <select name="inConvenio" id="inConvenio">Convenio <option value="Amigo dos Animais">Amigo dos Animais</option>
         <option value="Saúde Animal">Saúde Animal</option>
       </select>
     </div>
