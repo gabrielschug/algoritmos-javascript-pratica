@@ -39,5 +39,6 @@ Os projetos estão organizados de forma progressiva, do básico ao avançado:
 **Gabriel Schug**
 Estudante de Análise e Desenvolvimento de Sistemas | Foco em Back-End e Dados.
 
-🔗 [LinkedIn](https://www.linkedin.com/in/gabrielschug/)
-🌐 [Portfólio Pessoal](https://www.gabrielschug.com.br)
+🔗 [Acesse meu LinkedIn](https://www.linkedin.com/in/gabrielschug/)
+
+🌐 [Acesse meu Portfólio Pessoal](https://www.gabrielschug.com.br)
