@@ -28,3 +28,7 @@ select { width: 150px; }
 .italico { font-style: italic; }
 .entre-letras { letter-spacing: 0.5em; }
 .alinha-direita { text-align: right; }
+
+.cores-brasil {background-color: #d18d91;}
+.cores-pelotas {background-color: #fff28c;}
+.cores-farroupilha {background-color: #84d6a2;}

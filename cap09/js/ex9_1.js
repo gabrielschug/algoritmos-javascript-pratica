@@ -9,7 +9,7 @@ const trocarClube = () => {
   clube = formulario.rbBrasil.checked ? "Brasil" : formulario.rbPelotas.checked ? "Pelotas" : "Farroupilha"
 
   // Define as classes de row titulo: row e cores do clube
-  divTitulo.className = `row cores -${clube}`
+  divTitulo.className = `row cores  -${clube}`
 
   // Modifica a imagem de acordo com o rb selecionado
   imagemClube.src = `img/${clube.toLowerCase()}.png`// altera a imagem pelo src
