@@ -33,21 +33,75 @@ formulario.addEventListener("submit", (e) => {
 const verApostaExiste = (peso) => {
 
   // Obtem dados do localStorage
-  const dadosNome = localStorage.getItem('melanciaNomes')
-  const dadosPeso = localStorage.getItem('melanciaPesos')
+  const dadosPeso = localStorage.getItem('melanciaPeso')
 
-  // SE vazio → retorna ''
+  return dadosPeso?.includes(peso.toString()) ?? false
+
+}
+
+const mostrarApostas = () => {
+
+  const dadosNome = localStorage.getItem('melanciaNome')
+  const dadosPeso = localStorage.getItem('melanciaPeso')
+
   if (!dadosNome) {
     respostaLista.innerText = ''
     return
   }
 
-  // Se tiver dados → atribui em um array
+  const nomes = dadosNome.split(";")
+  const pesos = dadosPeso.split(";")
+
+  respostaLista.innerText = nomes.map((nome, i) => `${nome}: ${pesos[i]} gramas`).join('\n')
+
+}
+
+formulario.btnVencedor.addEventListener("click", () => {
+
+  const dadosNome = localStorage.getItem('melanciaNome')
+  const dadosPeso = localStorage.getItem('melanciaPeso')
+
+  if (!dadosNome) {
+    alert('Não há apostas cadastradas')
+    return
+  }
+
   const nomes = dadosNome.split(';')
   const pesos = dadosPeso.split(';')
 
-  // Percorre o array 'nomes', utiliza um idex pra buscas o 'peso' e retorna com a linha formatada. Junta com 'Join' 
-  respostaLista.innerText = nomes.map((nome, i) => `${nome}: ${pesos[i]} gramas`).join('\n')
-}
+  const pesoCorreto = Number(prompt('Qual o peso correto da melancia?'))
+  if (pesoCorreto == 0 || isNaN(pesoCorreto)) {
+    return
+  }
+
+
+  vencedor = nomes.reduce((melhor, nome, i) => { // Recebe: melhor (array de menor diferença) / nome(nome da aposta atual) / index
+
+
+    // Gera o valor das diferenças de peso da 'menor diferença até o momento' vs 'diferença atual'
+    const difMelhor = Math.abs(melhor.peso - pesoCorreto)
+    const difAtual = Math.abs(Number(pesos[i]) - pesoCorreto)
+
+    // Comparação das diferenças..
+    return difAtual < difMelhor ? { nome, peso: Number(pesos[i]) } : melhor
+  }, { nome: nomes[0], peso: Number(pesos[0]) }) // Valor inicial: cria um objeto do primeiro array do primeiro
+
+
+  let mensagem = `✨Resultado - Peso Correto ${pesoCorreto} gramas
+  ----------------------------------------------
+  🎉 Vencedor: ${vencedor.nome}
+  Aposta: ${vencedor.peso} gramas`
+  alert(mensagem)
+
+})
+
+formulario.btnLimpar.addEventListener('click', () => {
+  if (confirm('🗑️ Confirma a exclusão de todas as apostas?')) {
+    localStorage.removeItem('melanciaNome')
+    localStorage.removeItem('melanciaPeso')
+    mostrarApostas()
+  }
+})
+
 
 window.addEventListener("load", mostrarApostas())
