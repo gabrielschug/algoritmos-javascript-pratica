@@ -77,7 +77,6 @@ formulario.btnVencedor.addEventListener("click", () => {
 
   vencedor = nomes.reduce((melhor, nome, i) => { // Recebe: melhor (array de menor diferença) / nome(nome da aposta atual) / index
 
-
     // Gera o valor das diferenças de peso da 'menor diferença até o momento' vs 'diferença atual'
     const difMelhor = Math.abs(melhor.peso - pesoCorreto)
     const difAtual = Math.abs(Number(pesos[i]) - pesoCorreto)
