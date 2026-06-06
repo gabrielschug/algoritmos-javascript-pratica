@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png">
+  <link rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="">
+  <title>Exemplo 9.c</title>
+</head>
+
+<body>
+  <div class="container-fluid row mt-3">
+    <div class="div_imagem  col-sm-3">
+      <img src="https://images.pexels.com/photos/10490642/pexels-photo-10490642.jpeg" class="img-fluid"
+        alt="Imagem Ilustrativa">
+    </div>
+    <div class="div_principal  col">
+      <div class="div__colunas" id="divTitulo">
+        <div class="titulo">
+          <h1 class="mt-2">Auto Center: Controle de Serviços</h1>
+        </div>
+        <form>
+          <div class="div__entradas row">
+            <div class="mb-2 col-4">
+              <label for="inServico">Serviço</label><br>
+              <input type="text" id="inServico" class="form-control" autofocus>
+            </div>
+            <div class="mb-2 col-3">
+              <label for="inVeiculo">Veículo</label><br>
+              <input type="text" id="inVeiculo" class="form-control">
+            </div>
+          </div>
+          <input type="submit" value="Novo Serviço" class="btn btn-success ">
+          <input type="button" value="Executar Serviço" id="btnExecutar" class="btn btn-primary">
+        </form>
+      </div>
+      <div class="informacoes col col-7 mt-5 ">
+        <h3 class="info__servicos  d-flex flex-row-reverse"><span id="pendentes"></span></h3>
+        <h5 class="cabecalho__servicos  bg-dark p-2 text-light">Serviço em execução:</h5>
+        <table class="table-sm w-100 bg-light">
+          <tbody class="">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/ex9_c.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
