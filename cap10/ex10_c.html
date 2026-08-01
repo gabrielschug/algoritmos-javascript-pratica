@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo 10.c</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/174/174854.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row mt-4">
+      <div class="col-sm-3">
+        <img
+          src="https://images.pexels.com/photos/38808301/pexels-photo-38808301.jpeg?_gl=1*1h9a4m3*_ga*MzE3NTc1Mzg5LjE3NjI0NjA2NTg.*_ga_8JE65Q40S6*czE3ODU2MTcxMzckbzI4JGcxJHQxNzg1NjE3MTU2JGo0MSRsMCRoMA.."
+          alt="Prtida de Futebol" class="alta">
+      </div>
+      <div class="col-sm-6">
+        <h1>Copa do Brasil - Classificados</h1>
+        <form>
+          <p>
+            <label for="inClube">Clube:</label>
+            <input type="text" class="form-control" id="inClube" required autofocus>
+          </p>
+          <input type="submit" class="btn btn-primary float-right mb-3 me-2" value="Adicionar" id="btAdicionar">
+          <input type="button" class="btn btn-success float-right mb-3 me-2" value="Montar Tabela de Jogos"
+            id="btMontarTabela">
+          <input type="submit" class="btn btn-info float-right mb-3 me-2" value="Novos Clubes" id="btNovosClubes">
+        </form>
+        <div id="listaClubes"></div>
+        <table class="table table-striped text-center">
+          <tr>
+            <th colspan="3">Tabela de Jogos</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/ex10_c.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
